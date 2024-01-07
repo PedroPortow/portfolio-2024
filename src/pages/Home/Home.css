@@ -1,0 +1,20 @@
+.underline-from-left {
+  position: relative;
+  overflow: hidden;
+}
+
+.underline-from-left::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; 
+  left: 0;
+  width: 100%;
+  height: 2px; 
+  background-color: black; 
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+.underline-from-left:hover::after {
+  transform: translateX(0);
+}

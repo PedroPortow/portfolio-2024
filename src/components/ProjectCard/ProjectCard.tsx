@@ -11,7 +11,7 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ isHorizontal, title, description, img, stacks}) => {
   
   return (
-    <div className={isHorizontal ? "h-96 md:container flex flex-row bg-white p-2.5 border rounded-lg" :  "h-720 flex flex-col md:container p-2.5 bg-white border rounded-lg"}>
+    <div className={isHorizontal ? "h-96 md:container flex flex-row bg-white p-2.5 shadow rounded-lg" :  "h-720 flex flex-col md:container p-2.5 bg-white shadow rounded-lg"}>
       <div className={isHorizontal ? 'w-1/2 ' : 'h-1/2'}>
         <div className='button w-12 h-12 rounded-lg flex border items-center justify-center bg-darker-gray mt-12 ml-8'>
          <i className="fa-solid fa-clock text-gray-900" />

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from "framer-motion";
 interface ProjectCardProps {
   isHorizontal: boolean;
   title: string;
@@ -16,10 +16,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ isHorizontal, title, descript
         <div className='button w-12 h-12 rounded-lg flex border items-center justify-center bg-darker-gray mt-12 ml-8'>
          <i className="fa-solid fa-clock text-gray-900" />
         </div>
-        <div className='flex flex-col mt-12 ml-8'>
-          <p className="text-strong-black text-xl font-semibold ">{title} </p>
+        <motion.div className='flex flex-col mt-12 ml-8'  variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.5, delay: 1.5,  }}>
+          <p className="text-strong-black text-xl font-semibold " >{title} </p>
           <p className='text-light-gray text-lg mb-20 font-light'>{description}</p>
-        </div>
+        </motion.div>
         <div className='flex flex-row gap-x-8 ml-8 justify-between mr-8'>
           <div className='flex flex-row gap-x-8 '>
             <div className='flex flex-row gap-x-2 items-center cursor-pointer'>

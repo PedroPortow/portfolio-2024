@@ -1,6 +1,6 @@
 import React from 'react';
 import PaperPlaneAnim from "../../components/PaperPlaneAnim/PaperPlaneAnim.jsx"
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import './Home.css'
 import AnimatedTextWord from '../../components/TextReveal/TextReval.js';
 

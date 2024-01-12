@@ -1,46 +1,96 @@
-import React, { useState } from 'react';
-import logo from "../../assets/logo.png"
+import React, { useEffect, useRef, useState } from 'react';
+import logo from "../../assets/logo.png";
+import { changeLanguage } from 'i18next';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 interface NavProps {
-  // You can add specific props if needed
+  setLoaderVisible: (isVisible: boolean) => void;
 }
 
-const Nav: React.FC<NavProps> = () => {
+const Nav: React.FC<NavProps> = ({setLoaderVisible}) => {
+  const { i18n, t } = useTranslation();
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // This type ensures TypeScript knows what kind of event it's dealing with
+    const handleClickOutside = (event: MouseEvent) => {
+      // TypeScript now knows dropdownRef.current is a div and has a contains method
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    };
   
+    // Bind the event listener
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const changeLanguage = (language: string) => {
+    setLoaderVisible(true);
+    i18n.changeLanguage(language);
+    setIsDropdownOpen(false); // Close dropdown after changing language
+  };
+
+  const dropdownVariants = {
+    hidden: { opacity: 0, scale: 0.95, transition: { duration: 0.15 } },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.2 } }
+  };
+
   return (
-      <div className="navbar">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-            </div>
-            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li><a>Project</a></li>
-              <li><a>About</a></li>
-              <li><a>Contact</a></li>
-            </ul>
-          </div>
-          <img src={logo} width="90px" height="90px"/>
-        </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 space-x-6">
-            <li><a className='text-base text-strong-black'>Projects</a></li>
-            <li><a className='text-base text-strong-black'>About</a></li>
-            <li><a className='text-base text-strong-black'>Contact</a></li>
-          </ul>
-        </div>
-        <div className="navbar-end">
-        <div className="dropdown dropdown-end">
-          <div tabIndex={0} role="button" className="m-1">PT-BR</div>
-          <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-            <li><a>Item 1</a></li>
-            <li><a>Item 2</a></li>
-          </ul>
-        </div>
-        </div>
+    <div className="flex justify-between items-center  py-4  ">
+      <div className="flex-row-reverse flex items-center lg:flex-row">
+        <img src={logo} width="90px" height="90px" alt="logo" className='ml-4 lg:ml-0' />
+        <button className="lg:hidden ">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </button>
       </div>
+      <ul className="hidden lg:flex space-x-6">
+        <li><a href="#" className="text-gray-700 hover:text-gray-900">Projects</a></li>
+        <li><a href="#" className="text-gray-700 hover:text-gray-900">About</a></li>
+        <li><a href="#" className="text-gray-700 hover:text-gray-900">Contact</a></li>
+      </ul>
+      <div className="relative" ref={dropdownRef}>
+        <button onClick={toggleDropdown} className="m-1 text-gray-700">
+          {i18n.language}
+        </button>
+        <AnimatePresence>
+          {isDropdownOpen && (
+            <motion.ul
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={dropdownVariants}
+              className="absolute right-0 mt-2 p-2 shadow bg-white rounded-md w-fit z-50"
+            >
+          <li>
+              <a onClick={() => { if (i18n.language !== "pt-BR") changeLanguage('pt-BR') }} 
+                className={`text-nowrap ${i18n.language === "pt-BR" ? "text-gray-400 cursor-not-allowed" : "text-gray-700 hover:text-gray-500 cursor-pointer"}`}>
+                {t('pt-br')}
+              </a>
+            </li>
+            <li>
+              <a onClick={() => { if (i18n.language !== "en") changeLanguage('en') }} 
+                className={`text-nowrap ${i18n.language === "en" ? "text-gray-400 cursor-not-allowed" : "text-gray-700 hover:text-gray-500 cursor-pointer"}`}>
+                {t('english')}
+              </a>
+            </li>
+            </motion.ul>
+          )}
+        </AnimatePresence>
+      </div>
+    </div>
   );
 };
-
 
 export default Nav;

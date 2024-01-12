@@ -3,14 +3,17 @@ import PaperPlaneAnim from "../../components/PaperPlaneAnim/PaperPlaneAnim.jsx"
 import { motion } from "framer-motion";
 import './Home.css'
 import AnimatedTextWord from '../../components/TextReveal/TextReval.js';
+import { useTranslation } from 'react-i18next';
 
 interface HomeProps {
   // You can add specific props if needed
 }
 
 const Home: React.FC<HomeProps> = () => {
+  const { t }  = useTranslation();
+  
   return (
-      <div className="md:container md:mx-auto flex h-fit justify-around">
+    <div className="md:container md:mx-auto flex flex-row h-fit justify-around">
         <div className='flex flex-col mt-12 '>
           <motion.div
             variants={{
@@ -19,12 +22,12 @@ const Home: React.FC<HomeProps> = () => {
             }}
             initial="hidden"
             animate="visible"
-            transition={{ duration: 0.5, delay: 0.25,  }}
+            transition={{ duration: 0.5, delay: 0.25 }}
           >
-            <p className="text-strong-black text-7xl font-semibold mt-32">
-              Welcome!
+            <p className="text-strong-black xl:text-7xl font-semibold text-5xl md:mt-32">
+              {t('welcome')}
             </p>
-            <p className="text-strong-black text-7xl font-semibold ">I'm Pedro Porto</p>
+            <p className="text-strong-black   font-semibold xl:text-7xl text-5xl  ">{t('name_presentation')}</p>
           </motion.div>
         
           <motion.p 
@@ -37,12 +40,11 @@ const Home: React.FC<HomeProps> = () => {
             transition={{ duration: 0.5, delay: 0.5 }}
             className='text-light-gray text-lg font-light w-2/3 mt-4'
           >
-            I'm a Full stack web developer and a Computer Science student passionate about building seamless user experiences
+            {t('description_presentation')}
           </motion.p>
-          <AnimatedTextWord text="You can check out some of my personal projects below" />
-          {/* <p className='text-light-gray text-lg font-light w-2/3 mt-12 cursor-pointer underline-from-left'>You can check out some of my personal projects below  </p> */}
+          <AnimatedTextWord text={t('projects_callout')} />
         </div>
-        <div className='mr-4'>
+        <div className='mr-4 w-96 h-96 hidden lg:block lg:w-full d-none lg:h-full'>
           <PaperPlaneAnim />
         </div>
       </div>

@@ -12,17 +12,17 @@
   "todo_api_title": "API de Lista de Tarefas",
   "todo_api_description": "API de lista de tarefas com tarefas do usuário e espaços de trabalho compartilhados entre usuários",
   "about_me_title": "Sobre mim",
-  "about_me_left_text": "Olá! Sou um desenvolvedor web Full Stack de 20 anos e estudante de Ciência da Computação na Universidade Federal de Pelotas. Tenho paixão por criar e projetar softwares que não só funcionam de forma eficiente, mas que também proporcionam uma experiência de usuário intuitiva",
-  "about_me_right_text": "Minha jornada no desenvolvimento web começou com HTML e CSS básicos, e rapidamente evoluiu para um amor por JavaScript e tecnologias full-stack. Venho aprimorando minhas habilidades em desenvolvimento front-end e back-end, com um interesse particular em frameworks modernos como React para o front-end e Ruby on Rails para o back-end. Quando não estou programando, gosto de explorar novas tecnologias e acompanhar as últimas tendências no mundo da tecnologia. Meu objetivo é continuar crescendo como desenvolvedor e contribuir com projetos significativos que façam a diferença.",
+  "about_me_left_text": "Olá! Sou estudante de Ciência da Computação na Universidade Federal de Pelotas e trabalho como Desenvolvedor Full stack há mais de um ano. Atualmente trabalho principalmente com React no front-end e Ruby on Rails no back-end, que são as tecnologias que me especializo. No entanto, tenho experiência com outras tecnologias como Typescript, Tailwind, NodeJS e Java Spring Boot",
   "professional_experience_title": "Experiência Profissional",
   "fullstack_dev": "Desenvolvedor Full Stack",
   "food_delivery": "ComidaDelivery App",
   "food_delivery_description": "Página de aplicativo de comida com carrinho",
   "fullstack_dev_description": "Desenvolvedor fullstack na Checkplant, trabalhando principalmente com React e Ruby on Rails. Responsável por implementar novas funcionalidades e também auxiliar na correção de bugs",
   "fullstack_dev_date_period": "Out 2022 - atualmente",
-  "internship_dev": "Bootcamp - Programa Emergir",
-  "internship_dev_description": "Bootcamp de desenvolvimento full stack",
+  "internship_dev": "Trainee - Programa Emergir",
+  "internship_dev_description": "Programa de treinamento sobre desenvolvimento Full Stack e práticas relacionadas ao desenvolvimento",
   "internship_dev_date_period": "Mar 2022 - Out 2022",
-  "contact": "contato",
-  "contact_description": "Olá! Sou um desenvolvedor web Full Stack de 20 anos e estudante de Ciência da Computação na Universidade Federal de Pelotas. Tenho paixão por criar e projetar softwares que não só funcionam de forma eficiente, mas que também proporcionam uma experiência de usuário intuitiva."  
+  "contact": "Entre em contato comigo",
+  "contact_description": "Se deseja entrar em contato, sinta-se a vontade de me chamar nas minhas redes sociais" 
 }
+

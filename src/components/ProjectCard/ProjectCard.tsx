@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import Badge from '../Badge/Badge';
+import { FollowerPointerCard } from '../FollowingPointer/FollowingPointer';
 interface ProjectCardProps {
   isHorizontal: boolean;
   title: string;
@@ -57,9 +58,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ isHorizontal, title, descript
           </div>
         </div>
       </div>
-      <div className={`bg-darker-gray ${isHorizontal ? "w-fill lg:w-1/2" : "w-fill"} rounded-md overflow-hidden p-10`}>
-        <img src={img} alt={title} className="w-[700px] h-[300px] object-cover rounded-md" />
-      </div>
+        <FollowerPointerCard title={title} className={`bg-darker-gray ${isHorizontal ? "w-fill lg:w-1/2" : "w-fill"} rounded-md overflow-hidden p-10`}>
+          <img src={img} alt={title} className="w-[700px] h-[300px] object-cover rounded-md" />
+        </FollowerPointerCard>
     </div>
   );
 };

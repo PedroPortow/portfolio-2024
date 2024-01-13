@@ -12,7 +12,7 @@
   "todo_api_title": "Todo-list API",
   "todo_api_description": "Todo-list API with user tasks and also shared workspaces between users",
   "about_me_title": "About me",
-  "about_me_left_text": "Hey! I'm a 20-year-old Full Stack Web Developer and Computer Science student at Universidade Federal de Pelotas. I have a passion for creating and designing software that not only functions efficiently but also provides an intuitive user experience",
+  "about_me_left_text":"Hello! I am a Computer Science student at Universidade Federal de Pelotas and have been working as a Full Stack Developer for over a year. Currently, I mainly work with React on the front-end and Ruby on Rails on the back-end, which are the technologies I specialize in. However, I have experience with other technologies such as Typescript, Tailwind, NodeJS, and Java Spring Boot.",
   "about_me_right_text": "My journey in web development started with basic HTML and CSS, and it quickly evolved into a love for JavaScript and full-stack technologies. I've been honing my skills in both front-end and back-end development, with a particular interest in modern frameworks like React for the front-end and Ruby on Rails for the back-end. When I'm not coding, I enjoy exploring new technologies and keeping up with the latest trends in the tech world. My goal is to continually grow as a developer and contribute to meaningful projects that make a difference.",
   "professional_experience_title": "Professional Experience",
   "food_delivery": "Food Delivery App Mock",
@@ -20,9 +20,9 @@
   "fullstack_dev": "Full stack Developer",
   "fullstack_dev_description": "Fullstack developer at Checkplant, working mostly with React and Ruby on Rails. Responsible for implementing new features and also helping with bugs",
   "fullstack_dev_date_period": "Oct 2022 - now",
-  "internship_dev": "Bootcamp - Programa Emergir",
-  "internship_dev_description": "Full stack develpopment bootcamp",
+  "internship_dev": "Trainee - Programa Emergir",
+  "internship_dev_description": "Training program on Full Stack development and practices related to development.",
   "internship_dev_date_period": "Mar 2022 - Oct 2022",
-  "contact": "contact",
-  "contact_description": "Hey! I'm a 20-year-old Full Stack Web Developer and Computer Science student at Universidade Federal de Pelotas. I have a passion for creating and designing software that not only functions efficiently but also provides an intuitive user experience."  
+  "contact": "Contact me",
+  "contact_description": "If you wish to get in touch, feel free to reach out to me on my social media."  
 }

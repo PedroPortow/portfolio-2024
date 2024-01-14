@@ -5,11 +5,8 @@ import SlideUpAnimation from '../../components/SlideUpAnimation/SlideUpAnimation
 import myPic from "../../assets/me.png"
 import { AnimatedTooltip } from '../../components/AnimatedTooltip/AnimatedTooltip';
 import './About.css'
-interface AboutProps {
-  // Você pode adicionar props específicas se necessário
-}
 
-const About: React.FC<AboutProps> = () => {
+const About = React.forwardRef<HTMLDivElement>(({}, ref) => {
   const { t } = useTranslation();
 
 
@@ -19,7 +16,7 @@ const About: React.FC<AboutProps> = () => {
   
 
   return (
-      <div className="md:container md:mx-auto flex h-fit flex-col mt-32">
+      <div className="md:container md:mx-auto flex h-fit flex-col mt-32" ref={ref}>
         <h2 className='text-5xl font-semibold text-strong-black'>{t('about_me_title')}</h2>
         <div className='container mt-12 flex flex-row gap-8'>
           <div className='flex flex-col w-fill lg:w-[60%] gap-y-8'>
@@ -62,6 +59,6 @@ const About: React.FC<AboutProps> = () => {
         </div>
       </div>
   );
-};
+});
 
 export default About;

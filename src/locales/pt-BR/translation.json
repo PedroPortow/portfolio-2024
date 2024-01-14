@@ -12,7 +12,7 @@
   "todo_api_title": "API de Lista de Tarefas",
   "todo_api_description": "API de lista de tarefas com tarefas do usuário e espaços de trabalho compartilhados entre usuários",
   "about_me_title": "Sobre mim",
-  "about_me_left_text": "Olá! Sou estudante de Ciência da Computação na Universidade Federal de Pelotas e trabalho como Desenvolvedor Full stack há mais de um ano. Atualmente trabalho principalmente com React no front-end e Ruby on Rails no back-end, que são as tecnologias que me especializo. No entanto, tenho experiência com outras tecnologias como Typescript, Tailwind, NodeJS e Java Spring Boot",
+  "about_me_left_text": "Olá! Sou estudante de Ciência da Computação na Universidade Federal de Pelotas e trabalho como Desenvolvedor Full Stack há mais de um ano. Atualmente trabalho principalmente com React no front-end e Ruby on Rails no back-end, que são as tecnologias que me especializo. No entanto, tenho experiência com outras tecnologias como Typescript, Tailwind, NodeJS e Java Spring Boot",
   "professional_experience_title": "Experiência Profissional",
   "fullstack_dev": "Desenvolvedor Full Stack",
   "food_delivery": "ComidaDelivery App",

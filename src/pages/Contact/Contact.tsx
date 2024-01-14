@@ -1,11 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-interface ContactProps {
-  // Você pode adicionar props específicas se necessário
-}
-
-const Contact: React.FC<ContactProps> = () => {
+const Contact = React.forwardRef<HTMLDivElement>(({}, ref) => {
   const { t } = useTranslation();
 
   const openLink = (url: string) => {
@@ -34,6 +30,6 @@ const Contact: React.FC<ContactProps> = () => {
         </div>
       </div>
   );
-};
+});
 
 export default Contact;

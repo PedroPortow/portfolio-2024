@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import Loader from './components/Loader/Loader'
 import Nav from './components/Nav/Nav'
@@ -11,7 +11,11 @@ import Footer from './components/Footer/Footer'
 
 function App() {
   const [loaderVisible, setLoaderVisible] = useState(false);
-  
+  const projectsRef = useRef(null);
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
+  const homeRef= useRef(null)
+    
   useEffect(() => {
     if(loaderVisible){
       const timer = setTimeout(() => {
@@ -26,12 +30,12 @@ function App() {
     <div className='flex flex-col bg-light h-fit'>
       <Loader isVisible={loaderVisible}/>
       <div className='md:container md:mx-auto px-4 lg:px-12'>
-        {/* <Nav setLoaderVisible={setLoaderVisible} /> */}
+        <Nav setLoaderVisible={setLoaderVisible} projectsRef={projectsRef} homeRef={homeRef} aboutRef={aboutRef} contactRef={contactRef}/>
         <BentoGrid />
-        <Home />
-        <Projects />
-        <About />
-        <Contact />
+        <Home ref={homeRef} />
+        <Projects ref={projectsRef} />
+        <About ref={aboutRef} />
+        <Contact ref={contactRef} />
         <Footer />
       </div>
     </div>

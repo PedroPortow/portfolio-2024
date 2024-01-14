@@ -5,15 +5,16 @@ import './Home.css'
 import AnimatedTextWord from '../../components/TextReveal/TextReval.js';
 import { useTranslation } from 'react-i18next';
 
-interface HomeProps {
-  // You can add specific props if needed
-}
+const Home = React.forwardRef<HTMLDivElement>(({}, ref) => {
+    const variants = {
+      visible: { opacity: 1, translateY: 0 },
+      hidden: { opacity: 0, translateY: 50 },
+    };
 
-const Home: React.FC<HomeProps> = () => {
   const { t }  = useTranslation();
   
   return (
-    <div className="md:container md:mx-auto flex flex-row h-fit justify-around">
+    <div className="md:container md:mx-auto flex flex-row h-fit justify-around" ref={ref}>
         <div className='flex flex-col mt-12 '>
           <motion.div
             variants={{
@@ -49,6 +50,6 @@ const Home: React.FC<HomeProps> = () => {
         </div>
       </div>
   );
-};
+});
 
 export default Home;

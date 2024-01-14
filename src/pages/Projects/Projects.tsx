@@ -7,10 +7,6 @@ import foodDeliveryImg from "../../assets/comida-delivery.png";
 import { useInView, motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-interface ProjectsProps {
-  // You can add specific props if needed
-}
-
 interface AnimatedCardProps {
   isVisible: boolean;
   children: React.ReactNode;
@@ -18,7 +14,7 @@ interface AnimatedCardProps {
   width?: string | "w-full";
 }
 
-const Projects: React.FC<ProjectsProps> = () => {
+const Projects = React.forwardRef<HTMLDivElement>(({}, ref) => {
   const { t } = useTranslation();
   const firstCardRef = useRef(null);
   const secondCardRef = useRef(null);
@@ -32,7 +28,7 @@ const Projects: React.FC<ProjectsProps> = () => {
   const isFourthCardInView = useInView(fourthCardRef, { once: true });
 
   return (
-    <div className="md:container md:mx-auto flex flex-col h-fit justify-around gap-y-8 mt-36">
+    <div className="md:container md:mx-auto flex flex-col h-fit justify-around gap-y-8 mt-36" ref={ref}>
       <AnimatedCard isVisible={isFirstCardInView} ref={firstCardRef}>
         <ProjectCard
           img={pomdoroImg}
@@ -94,7 +90,7 @@ const Projects: React.FC<ProjectsProps> = () => {
       </AnimatedCard>
     </div>
   );
-};
+});
 
 const AnimatedCard = React.forwardRef<HTMLDivElement, AnimatedCardProps>(
   ({ isVisible, children, delay = 0.5, width = "w-full" }, ref) => {

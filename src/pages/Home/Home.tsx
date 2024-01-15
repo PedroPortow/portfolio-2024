@@ -6,11 +6,6 @@ import AnimatedTextWord from '../../components/TextReveal/TextReval.js';
 import { useTranslation } from 'react-i18next';
 
 const Home = React.forwardRef<HTMLDivElement>(({}, ref) => {
-    const variants = {
-      visible: { opacity: 1, translateY: 0 },
-      hidden: { opacity: 0, translateY: 50 },
-    };
-
   const { t }  = useTranslation();
   
   return (

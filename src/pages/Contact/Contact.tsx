@@ -9,7 +9,7 @@ const Contact = React.forwardRef<HTMLDivElement>(({}, ref) => {
   };
 
   return (
-      <div className="md:container md:mx-auto flex h-fit flex-col mt-32">
+      <div className="md:container md:mx-auto flex h-fit flex-col mt-32" ref={ref}>
         <h2 className='text-5xl font-semibold text-strong-black'>{t('contact')}</h2>
         <div className='container mt-4 flex flex-col sm:flex-row gap-8'>
           <p className='text-lg text-light-gray text-justify w-4/6'>{t('contact_description')}</p>

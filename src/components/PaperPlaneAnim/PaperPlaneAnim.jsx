@@ -20,7 +20,7 @@ function PaperPlaneAnim() {
 
   return (
     <>
-      <div className="container" style={{ zIndex: '2' }} ref={container} />
+      <div className="container"  ref={container} />
     </>
   );
 }

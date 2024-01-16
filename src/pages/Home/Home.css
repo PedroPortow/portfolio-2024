@@ -1,20 +1,25 @@
-.underline-from-left {
+.underline-anim {
+  display: inline-block;
   position: relative;
-  overflow: hidden;
+  text-decoration: none;
 }
 
-.underline-from-left::after {
+.underline-anim::after {
   content: '';
   position: absolute;
-  bottom: -2px; 
+  width: 82%;
+  transform: scaleX(0);
+  border-radius: 5px;
+  height: 0.1em;
+  bottom: 0;
   left: 0;
-  width: 100%;
-  height: 2px; 
-  background-color: black; 
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-out;
+  background: #475467;
+  transform-origin: right;
+  transition: transform 0.25s ease-out;
+}
+.underline-anim:hover::after {
+  transform: scaleX(1);
+  transform-origin:  left;
 }
 
-.underline-from-left:hover::after {
-  transform: translateX(0);
-}
+

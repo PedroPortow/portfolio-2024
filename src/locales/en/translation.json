@@ -3,7 +3,7 @@
   "english": "eng",
   "pt-br": "pt-br",
   "name_presentation": "I'm Pedro Porto",
-  "description_presentation": "I'm a Full Stack web developer and a Computer Science student passionate about building seamless user experiences",
+  "description_presentation": "I'm a Full Stack web developer and a Computer Science student",
   "projects_callout": "You can check some of my personal projects below",
   "pomodoro_title": "Pomodoro Task Manager",
   "pomodoro_description": "Pomodoro Timer integrated with a task management system. Each task's state persistently stored in the browser's localStorage.",

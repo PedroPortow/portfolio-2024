@@ -29,7 +29,7 @@ function App() {
   return (
     <div className='flex flex-col bg-light h-fit'>
       <Loader isVisible={loaderVisible}/>
-      <div className='md:container md:mx-auto px-4 lg:px-12'>
+      <div className=' md:mx-auto px-4 lg:px-1 max-w-screen-xl'>
         <Nav setLoaderVisible={setLoaderVisible} projectsRef={projectsRef} homeRef={homeRef} aboutRef={aboutRef} contactRef={contactRef}/>
         <BentoGrid />
         <Home ref={homeRef} />

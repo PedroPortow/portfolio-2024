@@ -52,7 +52,7 @@ const AnimatedTextWord: React.FC<AnimatedTextWordProps> = ({ text }) => {
           variants={child}
           style={{ marginRight: "5px" }}
           key={index}
-          className='text-light-gray text-lg font-light mt-12 cursor-pointer '
+          className='text-light-gray text-lg font-light mt-12 cursor-pointer'
         >
           {word}
         </motion.p>

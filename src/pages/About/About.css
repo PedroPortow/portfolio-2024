@@ -3,22 +3,22 @@
     position: relative;
     text-decoration: none;
 }
-  .cv-link::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    border-radius: 5px;
-    height: 0.1em;
-    bottom: 0;
-    left: 0;
-    background: currentcolor;
-    transform-origin: right;
-    transition: transform 0.25s ease-out;
-  }
-  .cv-link:hover::after {
-    transform: scaleX(1);
-    transform-origin:  left;
-  }
 
-  
+.cv-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  border-radius: 5px;
+  height: 0.1em;
+  bottom: 0;
+  left: 0;
+  background: currentcolor;
+  transform-origin: right;
+  transition: transform 0.25s ease-out;
+}
+.cv-link:hover::after {
+  transform: scaleX(1);
+  transform-origin:  left;
+}
+

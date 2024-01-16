@@ -12,7 +12,7 @@ const Loader: React.FC<LoaderProps> = ({ isVisible }) => {
       {isVisible && (
         <motion.div
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, transition: { duration: 1 } }} // Duração da transição de saída
+          exit={{ opacity: 0, transition: { duration: 1 } }} 
           className="fixed inset-0 z-50 bg-white justify-center flex flex-col items-center gap-y-4"
         >
          <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>

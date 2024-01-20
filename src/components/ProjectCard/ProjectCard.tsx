@@ -39,16 +39,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ isHorizontal, title, descript
             </motion.div>
           </div>
           <div className='flex flex-row gap-x-8 justify-between align-end'>
-            <div className='flex flex-row gap-x-8 '>
+            <div className='flex flex-row gap-x-2 '>
               {deployLink && 
-              <div className='flex flex-row gap-x-2 items-center cursor-pointer' onClick={() => openLink(deployLink)}>
-                <p className="text-strong-black  transition ease-in-out hover:text-gray-200 font-semilight">Deploy</p>
-                <i className="fa-solid fa-up-right-from-square text-strong-black" ></i>
-              </div>
+                <div className='flex flex-row gap-x-2 items-center cursor-pointer' onClick={() => openLink(deployLink)}>
+                  <button className="px-4 py-2 rounded-md border max-h-[38px] border-neutral-300 gap-x-2 flex flex-row items-center bg-neutral-100 text-strong-black text-sm hover:-translate-y-1 transform transition duration-200 hover:shadow-md">
+                    <i className="fa-solid fa-up-right-from-square text-strong-black" />
+                      Deploy
+                    </button>
+                </div>
               }
               <div className='flex flex-row gap-x-2 items-center cursor-pointer ' onClick={() => openLink(githubLink)}>
-                <p className="text-strong-black  ease-in-out hover:text-gray-20 hover:text-gray-200 font-semilight">Github</p>
-                <i className="fa-solid fa-up-right-from-square text-strong-black" ></i>
+                <button className="px-4 py-2 rounded-md border border-neutral-300 max-h-[38px] gap-x-2 flex flex-row items-center bg-neutral-100 text-strong-black text-sm hover:-translate-y-1 transform transition duration-200 hover:shadow-md">
+                <i className="fa-brands fa-github text-lg text-strong-black" />
+                  Github
+                </button>
               </div>
             </div>
             <div className='flex flex-row gap-x-2'>

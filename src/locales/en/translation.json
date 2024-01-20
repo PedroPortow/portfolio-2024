@@ -1,7 +1,7 @@
 {
   "welcome": "Welcome!",
-  "english": "eng",
-  "pt-br": "pt-br",
+  "english": "en",
+  "pt-br": "pt-BR",
   "name_presentation": "I'm Pedro Porto",
   "description_presentation": "I'm a Full Stack web developer and a Computer Science student",
   "projects_callout": "You can check some of my personal projects below",

@@ -14,6 +14,27 @@ const About = React.forwardRef<HTMLDivElement>(({}, ref) => {
     window.open(url, '_blank');
   };
   
+  
+        // Button code
+    
+  
+        // // tailwind.config.js code
+        // {
+        //   "animation": {
+        //     shimmer: "shimmer 2s linear infinite"
+        //   },
+        //   "keyframes": {
+        //     shimmer: {
+        //       from: {
+        //         "backgroundPosition": "0 0"
+        //       },
+        //       to: {
+        //         "backgroundPosition": "-200% 0"
+        //       }
+        //     }
+        //   }
+        // }
+      
 
   return (
       <div className="md:container md:mx-auto flex h-fit flex-col mt-32" ref={ref}>

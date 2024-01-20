@@ -96,7 +96,11 @@ const Home = React.forwardRef<HTMLDivElement>(({}, ref) => {
         >
           {t("description_presentation")}
         </motion.p>
-        <AnimatedTextWord text={t("projects_callout")} />
+        <a href="#" className="group font-light mt-8  text-light-gray text-nowrap transition duration-300">
+          {t("projects_callout")}
+          <span className="block max-w-0 group-hover:max-w-[360px] transition-all duration-500 h-0.5 bg-gray-400"></span>
+        </a>
+        {/* <AnimatedTextWord text={t("projects_callout")} /> */}
       </div>
       <div style={{ perspective: "1000px" }}>
         <motion.div

@@ -2,7 +2,6 @@ import React from "react";
 import PaperPlaneAnim from "../../components/PaperPlaneAnim/PaperPlaneAnim.jsx";
 import { motion } from "framer-motion";
 import "./Home.css";
-import AnimatedTextWord from "../../components/TextReveal/TextReval.js";
 import { useTranslation } from "react-i18next";
 
 const Home = React.forwardRef<HTMLDivElement>(({}, ref) => {

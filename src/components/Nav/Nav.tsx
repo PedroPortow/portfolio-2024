@@ -58,11 +58,6 @@ const Nav: React.FC<NavProps> = ({setLoaderVisible, projectsRef, homeRef, aboutR
     <div className="flex justify-between items-center  py-4  ">
       <div className="flex-row-reverse flex items-center lg:flex-row">
         <img src={logo} width="90px" height="90px" alt="logo" className='ml-4 lg:ml-0' onClick={() => scrollToPage(homeRef)}/>
-        <button className="lg:hidden" >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
-          </svg>
-        </button>
       </div>
       <ul className="hidden lg:flex space-x-6">
         <li><a href="#" className="text-gray-700 hover:text-gray-900" onClick={() => scrollToPage(projectsRef)}>Projects</a></li>

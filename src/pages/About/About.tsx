@@ -9,33 +9,10 @@ import './About.css'
 const About = React.forwardRef<HTMLDivElement>(({}, ref) => {
   const { t } = useTranslation();
 
-
   const openLink = (url: string) => {
     window.open(url, '_blank');
   };
   
-  
-        // Button code
-    
-  
-        // // tailwind.config.js code
-        // {
-        //   "animation": {
-        //     shimmer: "shimmer 2s linear infinite"
-        //   },
-        //   "keyframes": {
-        //     shimmer: {
-        //       from: {
-        //         "backgroundPosition": "0 0"
-        //       },
-        //       to: {
-        //         "backgroundPosition": "-200% 0"
-        //       }
-        //     }
-        //   }
-        // }
-      
-
   return (
       <div className="md:container md:mx-auto flex h-fit flex-col mt-32" ref={ref}>
         <h2 className='text-5xl font-semibold text-strong-black'>{t('about_me_title')}</h2>
@@ -44,7 +21,7 @@ const About = React.forwardRef<HTMLDivElement>(({}, ref) => {
             <p className='text-lg text-light-gray text-justify'>{t('about_me_left_text')} </p>
             
             <div className='flex flex-row items-center gap-x-2 hover:gap-x-3 cursor-pointer mt-4 transition-all'>
-              <a onClick={() => openLink("")} className='cv-link text-lg text-strong-black text-justify'>
+              <a onClick={() => openLink("https://drive.google.com/file/d/1PBMtPBLT1-e-4fJocaxqq875eZ0P8K9m/view?usp=drive_link")} className='cv-link text-lg text-strong-black text-justify'>
                 Curriculum Vitae 
               </a>
               <i className="fa-solid fa-arrow-right text-strong-black "></i>
